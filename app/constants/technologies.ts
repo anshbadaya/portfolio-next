@@ -1,5 +1,5 @@
 // constants/technologies.ts
-import { TechItem, PageItem } from '@/types/tech'
+import { TechItem, PageItem } from '../types/tech'
 
 export const PAGES: PageItem[] = [
   {

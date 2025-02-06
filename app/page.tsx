@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useState, useEffect } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import { Sun, Moon, Menu } from 'lucide-react'
 import { useTheme } from './hooks/useTheme'

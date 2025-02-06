@@ -1,6 +1,6 @@
 'use client'
 
-import { type FC } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,12 +14,6 @@ import { useTheme } from '../hooks/useTheme'
 import { Sun, Moon } from 'lucide-react'
 
 // Types
-interface MenuItem {
-  title: string
-  description: string
-  href: string
-}
-
 interface SocialLink {
   platform: string
   href: string
@@ -28,29 +22,6 @@ interface SocialLink {
 }
 
 // Constants
-const MENU_ITEMS: MenuItem[] = [
-  {
-    title: 'Blog',
-    description: 'Lees wat ik met de wereld deel',
-    href: '/blog'
-  },
-  {
-    title: 'Portfolio',
-    description: 'Projecten, ervaringen & kennis',
-    href: '/portfolio'
-  },
-  {
-    title: 'Spotify playlist',
-    description: 'Mijn brandstof om te werken',
-    href: '/spotify'
-  },
-  {
-    title: "Let's talk",
-    description: 'Open voor uitdagingen!',
-    href: '/contact'
-  }
-]
-
 const SOCIAL_LINKS: SocialLink[] = [
   {
     platform: 'Discord',
@@ -117,25 +88,6 @@ const Navigation: FC = () => {
   )
 }
 
-const MenuGrid: FC = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
-    {MENU_ITEMS.map((item) => (
-      <Link
-        key={item.title}
-        href={item.href}
-        className="group bg-white/80 dark:bg-[#0a1f1e]/60 backdrop-blur-xl p-6 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-[#0c2322]/80 transition-all duration-300 hover:scale-[1.02] border border-gray-100 dark:border-emerald-900/20"
-      >
-        <h2 className="text-gray-900 dark:text-white text-lg mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">
-          {item.title}
-        </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-sm group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
-          {item.description}
-        </p>
-      </Link>
-    ))}
-  </div>
-)
-
 const SocialLinks: FC = () => (
   <div className="flex justify-center gap-6">
     {SOCIAL_LINKS.map((link) => (
@@ -166,7 +118,6 @@ const MenuPage: FC = () => {
         <Navigation />
         
         <main className="flex-1 flex flex-col justify-center max-w-5xl mx-auto w-full">
-          {/* <MenuGrid /> */}
           <SocialLinks />
         </main>
       </div>
