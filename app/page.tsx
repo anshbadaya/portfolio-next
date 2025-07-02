@@ -60,12 +60,12 @@ const HeroSection: FC = () => (
       </h1>
       <h2 className="text-xl sm:text-2xl text-gray-900 dark:text-white mb-4">Software Engineer</h2>
       <p className="text-gray-600 dark:text-gray-400 max-w-xl">
-        Leading software innovation at ActiveBuildings, where we revolutionize IoT-based air quality monitoring for
+        Working at ActiveBuildings, where we revolutionize IoT-based air quality monitoring for
         <span className="text-emerald-600 dark:text-emerald-400">60+ global enterprises</span>, including
         <ExternalLink href="https://www.activebuildings.io/for-communities" text=" Balvi Fund (Ethereum)" />
         <ExternalLink href="https://www.activebuildings.io/for-businesses" text=" Reliance Industries" />, and
         <ExternalLink href="https://www.activebuildings.io/for-communities" text=" Indian Government Bodies" />. 
-        Now expanding my expertise into AI solutions to drive next-generation business transformation.
+        Now expanding my expertise into AI solutions and building applications as a hobby.
       </p>
     </div>
     <div className="text-4xl sm:text-5xl order-first sm:order-last" role="img" aria-label="Developer emoji">👨‍💻</div>
